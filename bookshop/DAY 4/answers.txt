@@ -1,0 +1,1 @@
+Elementlərin istənilən sıra ilə düzülməsini sağlıyır. display: flex; dən sonra yazdığımız hər bir align-items justify-content flex-direction və s. kimi kodlar çalışmağa başlayır

@@ -1,0 +1,2 @@
+Pseudo classes. Hover focus kimi özəlliklər web-site larda tez-tez rastlaşdığım xoşladığım özəlliklər idi. İndi onlarla işləmək də bir o qədər gözəldi
+Bir web-site'ın html strurukturunu qurub ona müəyyən stil verə bilərəm.

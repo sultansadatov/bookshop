@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ana səhifə</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/reset.css')}}">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/a32074749f.js" crossorigin="anonymous"></script>
+        {% block style %}
+        {% endblock %}
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style_index.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='slick/slick.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='slick/slick-theme.css')}}"> -->
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container px-5">
+          <a class="navbar-brand" href="/">KİTAB MAĞAZASI</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <i id="btnbasket navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-popper="none" class="fas fa-cart-arrow-down nav-link dropdown-toggle"></i>
+                <ul id="menu" class="menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li class="firstbook items dropdown-item"><i class="x fas fa-times"></i>1984 <span >16AZN</span></li>
+                  <li class="sefiller items dropdown-item"><i class="x fas fa-times"></i>Səfillər <span >21AZN</span></li>
+                  <hr>
+                  <li class="total dropdown-item">Cəmi <span class="total_price">37AZN</span></li>
+                </ul>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link {% if page == 'home'  %} active {%endif%}" aria-current="page" href="/">Ana səhifə</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Haqqımızda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kateqoriyalar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if page == 'product' %} active {% endif %}" href="/product/">Ayın kitabı</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  İstifadəçi
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+            {% block content %}
+            {% endblock %}
+
+
+
+
+          <footer class="footer py-3 text-white">
+            <div class="copyright">
+              <br>
+              <span>Copyright © E-mağaza layihəsi</span>
+            </div>
+          </footer>
+        
+
+          {% block script %}
+          {% endblock %}

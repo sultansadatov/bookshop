@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% from "_formhelpers.html" import render_field %}
+
+{% block content %}
+
+        <form method="POST">
+            {{ form.csrf_token }}
+            <div class="container">
+            <h1>Login</h1>
+            <hr>
+        
+            <!-- <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" class="form-control" required> -->
+
+            {{render_field(form.username)}}
+
+
+            <!-- <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" class="form-control" required> -->
+        
+            <!-- <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" class="form-control" required> -->
+        
+            {{render_field(form.password)}}
+
+            <hr>
+        
+            <p>You don't have an account? <a href="/register">Sign up</a>.</p>
+            <button type="submit" class="registerbtn">Login</button>
+            </div>
+
+        </form> 
+{% endblock %}

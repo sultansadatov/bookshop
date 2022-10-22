@@ -1,0 +1,81 @@
+h1{
+    font-family: "Lobster";
+    text-align: center;
+    color: #0dc;
+}
+a{
+    text-decoration: none;
+}
+.price{
+    font-family: Verdana, sans-serif;
+}
+.real{
+    color: green;
+}
+.deleted{
+    color: orange;
+}
+div {
+    background-color: black;
+    color: white;
+    text-align: right;
+    
+}
+.about{
+    color: white;
+    text-align: right;
+    text-decoration: overline white;
+}
+h4{
+    text-transform: uppercase;
+}
+table{
+    width: 100%;
+    /* border-collapse: collapse; */
+    border: 2px solid black;
+}
+tr{
+    border: 2px solid black;
+    height: 30px;
+}
+.comment{
+    text-align: center;
+}
+form{
+    text-align: center;
+    background-image: url(images/Inkognito.png), url(images/Inkognito.png);
+    background-position: left, right;
+    background-size: 250px, 250px;
+    background-repeat: no-repeat, no-repeat;
+}.last p{
+    background-color: #0dc;
+    text-align: center;
+    color: white;
+    height: 50px;
+}
+
+.button{
+    background-color: #0dc;
+    width: 100px;
+    height: 40px;
+    color: white;
+}
+h2 {
+    text-decoration: overline;
+}
+b{
+    font-size: 20px;
+}
+del{
+    font-size: 15px;
+}
+.last p{
+    text-align: center;
+    height: 60px;
+}
+#last{
+    text-align: center;
+}
+li{
+    text-decoration: underline;
+}

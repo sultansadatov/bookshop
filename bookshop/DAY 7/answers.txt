@@ -1,0 +1,3 @@
+Bootstrap ən məşhur css framework-dür.
+Copy paste məntiqi ilə işləyir. Müəyyən classlar'a aid olan hazır css propertyləri olur.
+Olar. Yuxarıda qeyd etdiyim kimi müəyyən classlar'a css dən still verərək hazır bir Bootstrap paketi hazırlamaq olar.

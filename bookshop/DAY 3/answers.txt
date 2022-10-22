@@ -1,0 +1,2 @@
+Html də hər tag'in defult dəyəri olur əgər biz özümüz bu dəyərləri müəyyən etmək istəyiriksə bu zaman css resetdən istifadə edirik.
+İcon lar imagelərdən daha keyfiyyətli olur və görüntü keyfiyyərini artırır.

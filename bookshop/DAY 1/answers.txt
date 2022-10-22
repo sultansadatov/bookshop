@@ -1,0 +1,6 @@
+1. GIT version control system - dir. Hər proqramçının öz depo alanı yəni repository - si olur və o orada istədiyi dəyişiklikləri edə bilir.
+2. Əgər biz komanda şəklində işləmək istəyiriksə bu ən optimal yoldur çünki digər komanda yoldaşlarımızla kodlarımızı paylaşa və ən vacibi birləşdirə bilərik.
+3. GITHub - ı GIT - in depo xidməti kimi təsəvvür etmək olar.
+4. Web browser - lər Bizim internetlə, web səhifələrlə əlaqəmizi yaradır. HTML elementləri web browserlərə web səhifələrin necə görünəcəyini deyir.
+5. HTML tag - ləri veb browser - lərin HTML fayllarını veb səhifələrə çevirməsinə kömək edir.
+6. Atributlar şəkilin eni və hündürlüyü kimi elementin əlavə xüsusiyyətlərini müəyyən edir. Həmçinin, müəyyən tag - lər üçün bəzi atributlar tələb olunur. Məsələn, <img> tag - ində src və alt atributları olmalıdır. 

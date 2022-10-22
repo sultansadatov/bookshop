@@ -1,0 +1,9 @@
+create table Book_info(
+    id int unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title varchar(255) NOT NULL,
+    author varchar(255) NOT NULL,
+    published_at date,
+    exist boolean DEFAULT TRUE,
+    genre varchar(255),
+    price DECIMAL(6, 2) DEFAULT 10.00
+);

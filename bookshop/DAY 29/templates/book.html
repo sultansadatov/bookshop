@@ -1,0 +1,188 @@
+{% extends 'layout.html' %}
+{% from "_formhelpers.html" import render_field %}
+
+        {% block style %}
+            <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+            <link rel="stylesheet" href="{{url_for('static', filename='slick/slick.css')}}">
+            <link rel="stylesheet" href="{{url_for('static', filename='slick/slick-theme.css')}}"> 
+        {% endblock %}
+        
+        {% block content %}
+        <div class="container px-5">
+        <div class="main row mt-5">
+          <div class="col-4">
+            <img class="book_img" src="{{book_var.image_url}}" alt="Book photo">
+          </div>
+          <div class="col-8 d-flex flex-column align-items-end">
+            <div class="row d-flex flex-column align-items-end"><p id="beyin">{{book_var.title}}</p> <p class="text-right"><b class="real">{{book_var.price}} Azn</b> <del class="deleted">15 Azn</del></p></div>
+            <div class="sebet row d-flex flex-column align-items-end mt-5">
+              <p>{{book_var.description}}</p>
+            </div>
+            <div class="query row d-flex  mt-5">
+              <ul class="query w3-xxxlarge">
+                <!-- Button trigger modal -->
+                <button type="button" class="sebet gray btn btn-primary" onclick="addToCard()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Səbətə əlavə et
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Bildiri</h5>
+                        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body text-end">
+                        Məhsul səbətə əlavə edildi
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Bağla</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <button type="button" class="sebet btn text-white" onclick="addToCard()">Səbətə əlavə et</button> -->
+                <button class="heart" onclick="give_heart()"><i class="fas fa-heart fa-2x"></i></button>
+                <button class="like transf" onclick="like()"><i class="fas fa-thumbs-up w3-xxxlarge fa-2x" ></i></button>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="xeberdar alert alert-warning" role="alert">
+          Bu kitabdan sadəcə {{book_var.stock}} ədəd qalıb
+        </div>
+        <div class="opac table">
+        <h4>Xüsusiyyətlər</h4>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <td>#</td>
+                <td>Xüsusiyyət</td>
+                <td>Açıqlama</td>
+            </tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>Dil:</td>
+                <td>{{book_var.lang}}</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Janr:</td>
+                <td>{{book_var.genre}}</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Müəllif:</td>
+                <td>{{book_var.author}}</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Nəşriyyat:</td>
+                <td>{{book_var.publisher}}</td>
+            </tr>
+          </table>
+        </div>
+        <br>
+        <h4 class="comment">Şərh yaz</h4>
+        <form class="opac" method="POST">
+
+          {{ form.csrf_token }}
+
+            <div class="mb-3">
+                <!-- <label for="formGroupExampleInput" class="form-label">Tam adınız</label> -->
+                <!-- <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ad Soyad"> -->
+                {{render_field(form.full_name)}}
+              </div>
+
+
+
+
+              <div class="col">
+                <label for="inputState" class="form-label">Hansı dildə oxumusunuz ?</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Azərbaycan</option>
+                  <option>Rus</option>
+                  <option>İngilis</option>
+                </select>
+              </div>
+                <label for="customRange1" class="form-label">Qiymətləndirmə:</label>
+                <input type="range" class="form-range" id="customRange1">
+                <!-- <label for="comment">Şərhiniz</label>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
+                </div> -->
+                {{render_field(form.message)}}
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Bu kitabı oxumusunuzmu ?</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+        <br>
+        <div class="row">
+          <h1>Comments</h1>
+          {% for comment in comments %}
+          <div class="comments">
+            <h4>{{comment.full_name}}</h4>
+            <div class="comment">
+                {{comment.message}}
+              </div>
+              <small>{{comment.time}}</small>
+          </div>
+        {% endfor %}
+        </div>
+        <div class="row parent-slider">
+          <h2>Bütün kitablar</h2>
+          <div class="slider">
+            <div class="item"><img src="{{url_for('static', filename='images/Inkognito.png')}}" alt=""></div>
+            <div class="item"><img src="{{url_for('static', filename='images/Sefiller.jpg')}}" alt=""></div>
+            <div class="item"><img src="{{url_for('static', filename='images/1984.jpg')}}" alt=""></div>
+            <div class="item"><img src="{{url_for('static', filename='images/Inkognito.png')}}" alt=""></div>
+            <div class="item"><img src="{{url_for('static', filename='images/Sefiller.jpg')}}" alt=""></div>
+            <div class="item"><img src="{{url_for('static', filename='images/1984.jpg')}}" alt=""></div>
+        </div>
+      </div>
+      {% endblock %}
+
+
+      {% block script %}
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="{{url_for('static', filename='js/product.js')}}"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="{{url_for('static', filename='slick/slick.min.js')}}"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script>
+        $('.slider').slick({
+            Infinity: true,
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 5,
+            responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+            });
+        </script>
+      {% endblock %}

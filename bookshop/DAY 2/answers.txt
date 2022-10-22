@@ -1,0 +1,2 @@
+Css yaratdığımız HTML veb saytına stil verir. Sanki ağ - qara göstərən televizorlar HTML indiki rəngli göstərən tv lər isə Css kimi ifadə etmək olar.
+Css selektorları stil vermək istədiyimiz HTML tag lərini seçmək üçün istifadə olunur. # tagin id -si .tagin class ı.

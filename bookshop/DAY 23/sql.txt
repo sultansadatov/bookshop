@@ -1,0 +1,61 @@
+create table Book_info(
+    id int unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title varchar(255) NOT NULL,
+    author smallint unsigned NOT NULL,
+    published_at date,
+    exist boolean DEFAULT TRUE,
+    genre smallint unsigned NOT NULL,
+    price DECIMAL(6, 2) DEFAULT 10.00,
+    language smallint unsigned NOT NULL
+);
+insert into Book_info (title, author, genre, language) values
+    ("Incognito", 1, 1, 1),
+    ("Angels and Demons", 2, 2, 1),
+    ("Three Men in a Boat", 4, 3, 3),
+    ("Adulthood is a Myth", 5, 1, 2),
+    ("Animal Farm", 3, 2, 3),
+    ("Furiously Happy", 2, 3, 1)
+
+
+
+create table Author (
+    id smallint unsigned PRIMARY KEY AUTO_INCREMENT,
+    name varchar(100) NOT NULL,
+    description text NOT NULl 
+);
+insert into Author (name, description) values
+    ("David Eagleman", "some text"),
+    ("Dan Brown", "some text"),
+    ("George Orwell", "some text"),
+    ("Nizami Gencevi", "some text"),
+    ("Sarah Andersen", "some text")
+
+
+create table Genre (
+    id smallint unsigned PRIMARY KEY AUTO_INCREMENT,
+    name varchar(100)
+);
+insert into Genre (name) values
+    ("Psychology"),
+    ("Fictional"),
+    ("Humour")
+
+
+
+create table Lang (
+    id smallint unsigned PRIMARY KEY AUTO_INCREMENT,
+    lang_code int NOT NUll,
+    lang_name varchar(100) NOT NULL
+);
+insert into Lang (lang_code, lang_name) values
+    (1, "english"),
+    (2, "turkish"),
+    (3, "russian")
+
+ALTER TABLE Author RENAME COLUMN name TO author_name; 
+ALTER TABLE Genre RENAME COLUMN name TO genre_name; 
+
+select Book_info.id, Book_info.title, Author.author_name, Book_info.exist, Genre.genre_name, Book_info.price, Lang.lang_name, Lang.lang_code from Book_info
+inner join Author on Book_info.author = Author.id
+inner join Genre on Book_info.genre = Genre.id
+inner join Lang on Book_info.language = Lang.id

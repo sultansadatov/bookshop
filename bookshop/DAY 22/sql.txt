@@ -1,0 +1,59 @@
+Add 6 different books to the table. (by INSERT function):
+    insert into Book_info (title, author)
+    values ("Incognito", "David Eagleman"),
+    ("Angels and Demons", "Dan Brown"),
+    ("Three Men in a Boat", "Jerome K. Jerome"),
+    ("Adulthood is a Myth", "Sarah Andersen"),
+    ("Animal Farm", "George Orwell"),
+    ("Furiously Happy", "Jenny Lawson")
+
+Display the table with title and price fields. (SELECT):
+    select title, price from Book_info
+
+Display the table with title and price fields where price is higher than 10.00. (WHERE):
+    select title, price from Book_info where price >= 10.00
+
+Display the table with all fields where id is equal to 1. (WHERE):
+    select * from Book_info where id = 1
+
+Display the table with all fields where id is equal to 1, 2 or 3. (IN):
+    select * from Book_info where id in (1, 2, 3)
+
+Display the table with all fields where price is higher than 5.00 and lower than 15.00. (BETWEEN):
+    select * from Book_info where price between 5 and 15
+
+Display the table with all fields where price is lower than 15.00 and where book is exist. (AND):
+    select * from Book_info where price <= 15 and exist = true
+
+Display the table with all fields where price is lower than 10.00 or id is equal 2. (OR):
+    select * from Book_info where price <= 10 or id = 2
+
+Display the table with all fields where author start with 'Da'. (LIKE):
+    select * from Book_info where author like "Da%"
+
+Display the table with all fields where title contains 'ni'. (LIKE):
+    select * from Book_info where title like "%ni%"
+
+Display the table with all fields where author's second and third letters are 'av'. (LIKE):
+    select * from Book_info where author like "%av%"
+
+Display the table in ascending order of price. (ORDER BY):
+    select * from Book_info order by price
+
+Display the table in descending order of id. (ORDER BY):
+    select * from Book_info order by id desc
+
+Change value of exist to false where id equal to 2. (UPDATE):
+    update Book_info set exist = false where id = 2
+
+Delete book which id equal to 3. (DELETE):
+    delete from Book_info where id = 3
+
+Delete the data in the table:
+    delete from Book_info
+
+Delete the table:
+    drop table Book_info
+
+Delete the database:
+    drop database Book_Shop

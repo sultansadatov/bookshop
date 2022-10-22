@@ -1,0 +1,2 @@
+1) JavaScript run oluna bilən yeganə frontend dilidir. Həm frontend həm də backend üçün istifadə oluna bilər. O web səhifələrimizə dinamiklik verir.
+2) Yarada bilərik amma heç bir interaktivliyi olmaz.

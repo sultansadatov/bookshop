@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kitab Mağazası</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/a32074749f.js" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- <div class="header">
+            <a href="index.html"><h1>Kitab Mağazası</h1></a>
+        </div> -->
+        <!-- <nav>
+            
+            <ul class="nav">
+                <div class="nav-link"><li>ana səhifə</li></div>
+                <div class="nav-link"><li>Haqqımızda</li></div>
+                <div class="nav-link"><li>Kateqoriyalar</li></div>
+                <div class="nav-link"><li>ayın kitabı</li></div>
+                <div class="nav-link"><li>Əlaqə</li></div>
+            </ul>
+            
+        </nav> -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container px-5">
+              <a class="navbar-brand" href="index.html">KİTAB MAĞAZASI</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                      <i id="btnbasket navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-popper="none" class="fas fa-cart-arrow-down nav-link dropdown-toggle"></i>
+                    <ul id="menu" class="menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li class="firstbook items dropdown-item"><i class="x fas fa-times"></i>1984 <span >16AZN</span></li>
+                      <li class="sefiller items dropdown-item"><i class="x fas fa-times"></i>Səfillər <span >21AZN</span></li>
+                      <hr>
+                      <li class="total dropdown-item">Cəmi <span class="total_price">37AZN</span></li>
+                    </ul>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="index.html">Ana səhifə</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Haqqımızda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Kateqoriyalar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Ayın kitabı</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      İstifadəçi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container px-5">
+        <div class="main row mt-5">
+          <div class="col-4">
+            <img class="book_img" src="images/Inkognito.png" alt="">
+          </div>
+          <div class="col-8 d-flex flex-column align-items-end">
+            <div class="row d-flex flex-column align-items-end"><p id="beyin">İncognito (beyinin gizli həyatı)</p> <p class="text-right"><b class="real">12.00 Azn</b> <del class="deleted">15.00 Azn</del></p></div>
+            <div class="sebet row d-flex flex-column align-items-end mt-5">
+              <p>Tanınmış nevroloq D.İqlmenin 20-dən çox dilə tərcümə edilən və indidən klassik əsərə çevrilən bu kitabı beynin sirli dünyasına təcrübələr, elmi biliklər və tarixi faktlar işığında səyahət edir. Kitab tibbi mövzuda olsa da, müəllif yazarlıq məharətini və zəngin biliyini birləşdirərək elmi faktları sadə və müqayisəli dillə oxucularına təqdim edir. Müəllif əsər boyu sədaqət geni, qumarbazlara çevrilən parkinson xəstələri, gen-mühit əlaqəsi, “yaxşı” və “pis” gen, şüuraltı və qərarvermə mexanizmi, məsuliyyət anlayışı, beynin insan həyatında rolu kimi bir çox mövzulara toxunur. Alim bu mövzuların beyinlə əlaqəsini izah etməklə kifayətlənmir, beyinlə bağlı müxtəlif formullar və modellər irəli sürür. İnsan psixologiyası və davranışlarına neyron və gen prizmasından baxmağı öyrədir. Elmi-populyar dildə yazılmış bu kitab xüsusən müəllimlər, psixoloqlar, valideynlər, həkimlər üçün mühüm bilikləri ehtiva edir.</p>
+            </div>
+            <div class="query row d-flex  mt-5">
+              <ul class="query w3-xxxlarge">
+                <!-- Button trigger modal -->
+                <button type="button" class="sebet gray btn btn-primary" onclick="addToCard()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Səbətə əlavə et
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Bildiri</h5>
+                        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body text-end">
+                        Məhsul səbətə əlavə edildi
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Bağla</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <button type="button" class="sebet btn text-white" onclick="addToCard()">Səbətə əlavə et</button> -->
+                <button class="heart" onclick="give_heart()"><i class="fas fa-heart fa-2x"></i></button>
+                <button class="like transf" onclick="like()"><i class="fas fa-thumbs-up w3-xxxlarge fa-2x" ></i></button>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="xeberdar alert alert-warning" role="alert">
+          Bu kitabdan sadəcə 2 ədəd qalıb
+        </div>
+        <div class="opac table">
+        <h4>Xüsusiyyətlər</h4>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <td>#</td>
+                <td>Xüsusiyyət</td>
+                <td>Açıqlama</td>
+            </tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>Dil:</td>
+                <td>Azərbaycanca</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Janr:</td>
+                <td>Psixologiya</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Müəllif:</td>
+                <td>David Eagleman</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Nəşriyyat:</td>
+                <td>Qanun Nəşriyyatı</td>
+            </tr>
+          </table>
+        </div>
+        <br>
+        <h4 class="comment">Şərh yaz</h4>
+        <form class="opac">
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Tam adınız</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ad Soyad">
+              </div>
+              <div class="col">
+                <label for="inputState" class="form-label">Hansı dildə oxumusunuz ?</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Azərbaycan</option>
+                  <option>Rus</option>
+                  <option>İngilis</option>
+                </select>
+              </div>
+                <label for="customRange1" class="form-label">Qiymətləndirmə:</label>
+                <input type="range" class="form-range" id="customRange1">
+                <label for="comment">Şərhiniz</label>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Bu kitabı oxumusunuzmu ?</label>
+                </div>
+                <button type="button" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+        <!-- <div class="sos">
+        <ul class="sosial_medias">
+            <div><li><a href="https://www.facebook.com" class="fab fa-facebook-f "></a></li></div>
+            <div><li><a href="https://www.youtube.com"  class="fab fa-youtube"></a></li></div>
+            <div><li><a href="https://www.instagram.com" class="fab fa-instagram"></a></li></div>
+            <div><li><a href="https://www.linkedin.com" class="fab fa-linkedin-in"></a></li></div>
+            <div><li><a href="https://www.google.com" class="fab fa-google"></a></li></div>
+            <br>
+            <div><li class="fas fa-arrow-circle-up fa-2x"></li></div>
+        </ul>
+        <br>
+        <div class="last">
+            <p id="last"><br><br> 2020 © Bütün haqlar qorunur.</p>
+        </div>
+        </div> -->
+        <br>
+        <footer class="opac footer py-3 text-white">
+            <div class="copyright">
+              <p>Copyright © E-mağaza layihəsi</p>
+            </div>
+          </footer>
+
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="product.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
